@@ -17,9 +17,17 @@ Result class:
   - Use only for expected failures
 
 ### The Result class and CQS 
-| Method signature | S/Q |
+| Method signature |  |
 | ------ | ------ |
 | public void Save (T value) | Command / Not expected to fail |
 | public Result Save (T value) | Command / Expected to fail |
 | public T Get(int id) | Query / Not excpected to fail |
 | public Result<T> Get(int id) | Query / Expected to fail |
+
+# Maybe class
+Make your code honest with Maybe type.
+Convert nulls into Maybe when they enter the domain model.
+Convert them back to nulls when they leave the domain model.
+Result<T> != Maybe<T>
+Result<T> GetById(int id) :(
+Maybe<T> GetById(int id) :)
