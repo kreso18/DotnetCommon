@@ -25,9 +25,9 @@ Result class:
 | public Result<T> Get(int id) | Query / Expected to fail |
 
 # Maybe class
-Make your code honest with Maybe type.
-Convert nulls into Maybe when they enter the domain model.
-Convert them back to nulls when they leave the domain model.
-Result<T> != Maybe<T>
-Result<T> GetById(int id) :(
-Maybe<T> GetById(int id) :)
+- Make your code honest with Maybe type.
+- Convert nulls into Maybe when they enter the domain model.
+- Convert them back to nulls when they leave the domain model.
+- Result<T> != Maybe<T>
+- Result<T> GetById(int id) :(
+- Maybe<T> GetById(int id) :)
